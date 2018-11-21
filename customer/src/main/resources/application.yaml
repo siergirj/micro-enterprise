@@ -6,9 +6,9 @@ rest:
 spring:
   data:
     mongodb:
-      host: ds113454.mlab.com
+      host: localhost
       port: 13454
-      authentication-database: heroku_wvq68bpf
-      username: heroku_wvq68bpf
-      password: heroku_wvq68bpf
+#      authentication-database: heroku_wvq68bpf
+#      username: heroku_wvq68bpf
+#      password: heroku_wvq68bpf
       database: heroku_wvq68bpf
