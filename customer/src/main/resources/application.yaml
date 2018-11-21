@@ -3,12 +3,16 @@ rest:
     customer: /api/v1/customerManagement/customer
     customer.id: /api/v1/customerManagement/customer/{id} 
     
-spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 13454
+#spring:
+#  profiles:
+#    active: dev
+#  data:
+#    mongodb:
+#      uri: mongodb://heroku_wvq68bpf:heroku_wvq68bpf@ds113454.mlab.com:13454/heroku_wvq68bpf&authMechanism=SCRAM-SHA-1
+#      host: ds113454.mlab.com
+#      port: 13454
 #      authentication-database: heroku_wvq68bpf
 #      username: heroku_wvq68bpf
 #      password: heroku_wvq68bpf
-      database: heroku_wvq68bpf
+#      database: heroku_wvq68bpf
+      
