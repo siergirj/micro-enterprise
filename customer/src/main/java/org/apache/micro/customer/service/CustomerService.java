@@ -23,7 +23,7 @@ public class CustomerService {
 
 	public Customer search(String name) {
 		Customer result = new Customer();
-		result.setName(name);
+		result.setName("*"+name+"*");
 		return result;
 	}
 
