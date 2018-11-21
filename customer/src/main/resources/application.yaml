@@ -1,0 +1,8 @@
+rest:
+  mapping:
+    customer: /api/v1/customerManagement/customer
+    customer.id: /api/v1/customerManagement/customer/{id} 
+    
+    
+    
+    
