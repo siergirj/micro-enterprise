@@ -1,1 +1,1 @@
-web: java -jar target/micro-customer.jar
+web: java -jar customer/target/micro-customer.jar
