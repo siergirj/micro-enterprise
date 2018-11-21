@@ -18,7 +18,13 @@ public class CustomerService {
 
 	public void delete(String id) {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	public Customer search(String name) {
+		Customer result = new Customer();
+		result.setName(name);
+		return result;
 	}
 
 }
