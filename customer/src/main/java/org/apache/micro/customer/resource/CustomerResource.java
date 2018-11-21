@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,21 +25,18 @@ public class CustomerResource {
 	public Customer search(@RequestParam String name) {
 		return service.search(name);
 	}
-	//
-	// @GetMapping
-	// @RequestMapping("${rest.mapping.customer.id}")
-	// public Customer get(String id) {
-	// return service.get(id);
-	// }
-	//
-	// @PutMapping
-	// @RequestMapping("${rest.mapping.customer.id}")
-	// public void put(Customer customer) {
-	// service.saveOrUpdate(customer);
-	// }
 
-	@DeleteMapping
-	@RequestMapping("${rest.mapping.customer.id}")
+	@GetMapping("${rest.mapping.customer.id}")
+	public Customer get(String id) {
+		return service.get(id);
+	}
+
+	@PutMapping("${rest.mapping.customer.id}")
+	public void put(Customer customer) {
+		service.saveOrUpdate(customer);
+	}
+
+	@DeleteMapping("${rest.mapping.customer.id}")
 	public void delete(String id) {
 		service.delete(id);
 	}
