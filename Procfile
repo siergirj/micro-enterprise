@@ -1,1 +1,2 @@
-web: java -Dspring.data.mongodb.uri=$MONGOLAB_URI -jar customer/target/micro-customer.jar
+web: java -jar customer/target/micro-customer.jar 
+--spring.data.mongodb.uri=$MONGOLAB_URI
