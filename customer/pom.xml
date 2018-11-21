@@ -40,7 +40,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>micro-customer</finalName>
+		<finalName>customer</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
