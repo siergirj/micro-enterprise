@@ -1,1 +1,1 @@
-web: java -jar $JAVA_OPTS target/micro-customer.jar
+web: java -jar target/micro-customer.jar
