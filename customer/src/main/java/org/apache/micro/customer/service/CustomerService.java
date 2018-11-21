@@ -1,30 +1,29 @@
 package org.apache.micro.customer.service;
 
 import org.apache.micro.customer.model.Customer;
+import org.apache.micro.customer.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerService {
 
+	@Autowired
+	private CustomerRepository repository;
+
 	public Customer get(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return null; //repository.findOne(id);
 	}
 
 	public Customer saveOrUpdate(Customer customer) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.save(customer);
 	}
 
 	public void delete(String id) {
-		// TODO Auto-generated method stub
-
+//		repository.delete(id);
 	}
 
 	public Customer search(String name) {
-		Customer result = new Customer();
-		result.setName("*"+name+"*");
-		return result;
+		return repository.findByName(name);
 	}
-
 }

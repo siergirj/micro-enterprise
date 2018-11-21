@@ -10,8 +10,11 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring.boot.version>2.1.0.RELEASE</spring.boot.version>
-		<junit.version>3.8.1</junit.version>
 		<micro.version>1.0.0</micro.version>
+		<springfox.version>2.6.0</springfox.version>
+
+		<junit.version>3.8.1</junit.version>
+		<fakemongo.version>2.1.0</fakemongo.version>
 	</properties>
 
 	<dependencies>
@@ -28,13 +31,29 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-parent</artifactId>
-			<version>2.1.0.RELEASE</version>
+			<version>${spring.boot.version}</version>
 			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+			<version>${spring.boot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${springfox.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.github.fakemongo</groupId>
+			<artifactId>fongo</artifactId>
+			<version>${fakemongo.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
